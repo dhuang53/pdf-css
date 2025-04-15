@@ -3,33 +3,38 @@ name: Deploy CSS to GitHub Pages
 on:
     push:
         branches:
-            - main # Trigger on push to 'main' branch
+            - main
 
 permissions:
-    contents: write # Allow push access to the repository contents
+    contents: write
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
 
         steps:
-            # Checkout the repository
             - name: Checkout repository
               uses: actions/checkout@v2
 
-            # Copy the CSS file to the folder where you want it to be served
-            - name: Copy CSS file to the correct folder
-              run: |
-                  mkdir -p docs  # Create a 'docs' folder or use your preferred folder
-                  cp styles/ss-pdf.css docs/
-
-            # Commit and push changes to the 'gh-pages' branch
-            - name: Commit and push changes
+            - name: Set up Git
               run: |
                   git config --global user.name "github-actions"
                   git config --global user.email "github-actions@github.com"
+
+            - name: Copy CSS file to the correct folder
+              run: |
+                  mkdir -p docs
+                  cp styles/ss-pdf.css docs/
+
+            - name: Commit and push to gh-pages
+              run: |
+                  git checkout gh-pages || git checkout --orphan gh-pages
+                  git reset --mixed
+                  git rm -rf .
+                  git clean -fdx
+                  git restore --source=main -- docs/ss-pdf.css
                   git add docs/ss-pdf.css
-                  git commit -m "Deploy CSS file to GitHub Pages"
-                  git push origin gh-pages  # Push to 'gh-pages' branch instead of 'main'
+                  git commit -m "Deploy CSS file to GitHub Pages" || echo "No changes to commit"
+                  git push origin gh-pages --force
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
