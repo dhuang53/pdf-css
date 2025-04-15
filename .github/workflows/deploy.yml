@@ -5,6 +5,9 @@ on:
         branches:
             - main # Trigger on push to 'main' branch
 
+permissions:
+    contents: write # Allow push access to the repository contents
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
