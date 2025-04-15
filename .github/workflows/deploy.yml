@@ -18,7 +18,7 @@ jobs:
             - name: Copy CSS file to the correct folder
               run: |
                   mkdir -p docs  # Create a 'docs' folder or use your preferred folder
-                  cp pdf-css/styles/ss-pdf.css docs/
+                  cp styles/ss-pdf.css docs/
 
             # Commit and push changes back to the 'main' branch
             - name: Commit and push changes
