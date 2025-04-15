@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 /* globals.css */
 
@@ -14,7 +14,7 @@
 .pdf-container h4,
 .pdf-container h5 {
 	color: #1e293b;
-	font-family: Lato, "Lato Fallback";
+	font-family: "Lato", sans-serif;
 }
 
 .pdf-container h1,
@@ -147,7 +147,7 @@
 }
 /* .pdf-container */
 .pdf-container * {
-	font-family: Lato, "Lato Fallback" !important;
+	font-family: "Lato", sans-serif !important;
 }
 .pdf-container .pdf-footer,
 .pdf-container .pdf-header {
@@ -519,7 +519,7 @@
 
 .pdf-container .pdf-main .article-body blockquote {
 	width: 90%;
-	font-family: Lato, "Lato Fallback";
+	font-family: "Lato", sans-serif;
 	position: relative;
 	padding: 1.5rem;
 	margin: 0;
