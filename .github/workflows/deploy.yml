@@ -23,13 +23,13 @@ jobs:
                   mkdir -p docs  # Create a 'docs' folder or use your preferred folder
                   cp styles/ss-pdf.css docs/
 
-            # Commit and push changes back to the 'main' branch
+            # Commit and push changes to the 'gh-pages' branch
             - name: Commit and push changes
               run: |
                   git config --global user.name "github-actions"
                   git config --global user.email "github-actions@github.com"
                   git add docs/ss-pdf.css
                   git commit -m "Deploy CSS file to GitHub Pages"
-                  git push origin main
+                  git push origin gh-pages  # Push to 'gh-pages' branch instead of 'main'
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
