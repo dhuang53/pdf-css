@@ -148,16 +148,6 @@
 	margin: 1rem 0;
 	overflow: hidden;
 }
-.pdf-container .pdf-main .fr-image-container[style*="float:left"],
-.pdf-container .pdf-main .fr-image-container[style*="float: left"] {
-	margin-left: 0;
-	margin-right: 1.5rem;
-}
-.pdf-container .pdf-main .fr-image-container[style*="float:right"],
-.pdf-container .pdf-main .fr-image-container[style*="float: right"] {
-	margin-right: 0;
-	margin-left: 1.5rem;
-}
 .pdf-container .pdf-main .fr-image-container .reference,
 .pdf-container .pdf-main .fr-image-container .fr-reference {
 	display: block;
@@ -186,8 +176,15 @@
 .pdf-container .pdf-main .fr-image-container picture {
 	display: flex;
 }
-.pdf-container .pdf-main .fr-image-container {
-	float: unset !important;
+.pdf-container .article-body .fr-image {
+	display: flex;
+	max-height: 400px;
+}
+.pdf-container .article-body .fr-image img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	object-fit: contain;
 }
 .pdf-container .pdf-main .fr-right {
 	float: right !important;
@@ -213,25 +210,11 @@
 	top: 0;
 	left: 0;
 }
-.pdf-container .pdf-main .fr-full {
-	width: 100% !important;
-}
-.pdf-container .pdf-main .fr-half {
-	width: calc(50% - 2rem) !important;
-	float: left;
-	margin: 1rem 1rem 1rem 0;
-	width: 100% !important;
-}
-.pdf-container .pdf-main .fr-third {
-	width: 33% !important;
-	width: 100% !important;
-}
-.pdf-container .pdf-main .fr-quarter {
-	width: 25% !important;
-	width: 100% !important;
-}
+.pdf-container .pdf-main .fr-full,
+.pdf-container .pdf-main .fr-half,
+.pdf-container .pdf-main .fr-third,
+.pdf-container .pdf-main .fr-quarter,
 .pdf-container .pdf-main .fr-two-thirds {
-	width: 66% !important;
 	width: 100% !important;
 }
 .pdf-container .pdf-main .blogs figure:first-of-type,
@@ -289,15 +272,8 @@
 .pdf-container .pdf-main .wp-block-image {
 	margin-bottom: 1rem;
 }
-.pdf-container .pdf-main .wp-block-image.alignleft {
-	margin-right: 1rem;
-}
-.pdf-container .pdf-main .wp-block-image.alignright {
-	margin-left: 1rem;
-}
 .pdf-container .pdf-main .wp-block-image.alignleft,
 .pdf-container .pdf-main .wp-block-image.alignright {
-	margin: 0;
 	width: 100% !important;
 	display: flex;
 	justify-content: center;
@@ -306,6 +282,9 @@
 	margin-bottom: 2rem;
 	width: 100%;
 	font-weight: 300;
+	display: block;
+	padding: 0;
+	margin: 0;
 }
 .pdf-container .article-body a {
 	color: #006e96;
@@ -375,19 +354,17 @@
 	max-width: 100%;
 }
 .pdf-container .article-body blockquote {
-	width: 50%;
 	background-color: rgb(243 244 246);
 	font-family: "Poppins", sans-serif;
 	position: relative;
-	padding: 2rem 2rem 2rem 3rem;
-	margin: 2rem;
-	width: calc(100% - 3rem);
-	float: left;
 	font-size: 1.7rem;
 	font-weight: 600;
 	text-align: left;
 	line-height: 1.3;
 	border: none;
+	margin: 0;
+	width: 100%;
+	padding: 1.5rem;
 }
 .pdf-container .article-body blockquote p {
 	font-size: 1.4rem;
@@ -407,7 +384,7 @@
 .pdf-container .article-body blockquote.left {
 	float: left;
 }
-.pdf-container .article-body blockquote::before {
+/* .pdf-container .article-body blockquote::before {
 	font-family: "Poppins", sans-serif;
 	content: "\201C";
 	color: rgba(0, 0, 0, 0.1);
@@ -416,6 +393,9 @@
 	left: -3rem;
 	top: -2rem;
 	height: 0;
+}
+.pdf-container .article-body blockquote::before {
+	content: "";
 }
 .pdf-container .article-body blockquote::after {
 	content: "\201D";
@@ -426,9 +406,7 @@
 	bottom: 3.25rem;
 	height: 0;
 }
-.pdf-container .article-body .alignleft {
-	float: left;
-}
+*/
 .pdf-container .article-body p.has-background {
 	padding: 1rem !important;
 	margin: 1rem 0 !important;
@@ -499,31 +477,4 @@
 }
 .pdf-container .pdf-main .article-header .extras > :first-child {
 	padding-right: 10px;
-}
-.pdf-container .pdf-main .article-body blockquote {
-	margin: 0;
-	width: 100%;
-	padding: 1.5rem;
-	float: none;
-}
-.pdf-container .pdf-main .article-body blockquote::before {
-	content: "";
-}
-.pdf-container .pdf-main .article-body {
-	display: block;
-	padding: 0;
-	margin: 0;
-}
-.pdf-container .pdf-main .article-body .fr-half {
-	width: calc(50% - 2rem) !important;
-}
-.pdf-container .pdf-main .article-body .fr-image {
-	display: flex;
-	max-height: 400px;
-}
-.pdf-container .pdf-main .article-body .fr-image img {
-	position: relative;
-	width: 100%;
-	height: auto;
-	object-fit: contain;
 }

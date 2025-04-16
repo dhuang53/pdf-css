@@ -244,20 +244,12 @@
 			}
 		}
 
-		.fr-full {
-			width: 100% !important;
-		}
-
+		.fr-full,
 		.fr-half,
 		.fr-third,
 		.fr-quarter,
 		.fr-two-thirds {
 			width: 100% !important;
-		}
-
-		.fr-half {
-			float: left;
-			margin: 1rem 1rem 1rem 0;
 		}
 
 		&.blogs figure:first-of-type,
@@ -419,7 +411,7 @@
 			max-width: 100%;
 		}
 
-		blockquote {
+		/* blockquote {
 			width: calc(100% - 4rem);
 			background-color: rgb(243, 244, 246);
 			font-family: "Poppins", sans-serif;
@@ -479,12 +471,7 @@
 				right: -3rem;
 				bottom: 3.25rem;
 			}
-		}
-
-		/* Legacy from WP */
-		.alignleft {
-			float: left;
-		}
+		} */
 	}
 
 	/****************************
