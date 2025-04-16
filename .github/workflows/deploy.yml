@@ -16,20 +16,19 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v2
 
+            - name: Set up git config
+              run: |
+                  git config --global user.name "github-actions"
+                  git config --global user.email "github-actions@github.com"
+
             - name: Keep only CSS file at the root
               run: |
                   cp styles/ss-pdf.css .
                   rm -rf .github/ styles/  # Remove other directories in the branch
 
-            - name: Switch to gh-pages branch
+            - name: Commit and push changes to 'gh-pages' branch
               run: |
-                  git config --global user.name "github-actions"
-                  git config --global user.email "github-actions@github.com"
                   git checkout -b gh-pages # Create the 'gh-pages' branch
-
-            # Commit and push changes to the gh-pages branch
-            - name: Commit and push changes
-              run: |
                   git add .
                   git commit -m "Deploy CSS file to GitHub Pages" || echo "No changes to commit"
                   git push origin gh-pages --force
