@@ -24,7 +24,7 @@ jobs:
             - name: Keep only CSS file at the root
               run: |
                   cp styles/ss-pdf.css .
-                  cp styles/ss-pdf.min.css .
+                  cp styles/ss-pdf-min.css .
                   rm -rf .github/ styles/  # Remove other directories in the branch
 
             - name: Commit and push changes to 'gh-pages' branch
