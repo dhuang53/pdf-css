@@ -441,6 +441,9 @@
 	border-width: 0 0 4px;
 	border-bottom: none none solid;
 }
+.pdf-container .pdf-header img {
+	height: 50px;
+}
 .pdf-container .pdf-header svg {
 	width: 16px;
 	height: 16px;
