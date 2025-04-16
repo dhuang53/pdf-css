@@ -17,28 +17,29 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v2
 
-            # Copy the CSS file to the 'docs' folder
-            - name: Copy CSS file to the correct folder
+            # Ensure the 'docs' directory exists and contains the desired CSS file
+            - name: Prepare docs directory
               run: |
                   mkdir -p docs  # Create a 'docs' folder if it doesn't exist
-                  cp styles/ss-pdf.css docs/
+                  cp styles/ss-pdf.css docs/  # Copy the CSS file to 'docs'
 
-            # Prepare a clean state for the 'gh-pages' branch
+            # Switch to the gh-pages branch
             - name: Switch to gh-pages branch
               run: |
                   git config --global user.name "github-actions"
                   git config --global user.email "github-actions@github.com"
                   git checkout -b gh-pages || git checkout gh-pages  # Create or switch to the 'gh-pages' branch
 
-            - name: Clean up gh-pages branch
+            # Clean the branch and copy only the 'docs' directory to the root
+            - name: Clean and add docs directory
               run: |
-                  rm -rf ./*  # Remove everything from the working directory
-                  git clean -fdx  # Clean untracked files and directories
+                  rm -rf ./*  # Remove all existing files in the branch
+                  cp -r docs/* .  # Copy contents of 'docs' to the root
+                  ls -la  # List files to verify
 
-            # Add only the 'docs' folder and push to 'gh-pages'
+            # Commit and push changes to the gh-pages branch
             - name: Commit and push changes
               run: |
-                  cp -r docs/* .
                   git add .
                   git commit -m "Deploy CSS file to GitHub Pages" || echo "No changes to commit"
                   git push origin gh-pages --force
