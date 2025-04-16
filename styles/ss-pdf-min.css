@@ -440,10 +440,6 @@
 .pdf-container .pdf-footer td:last-child {
 	text-align: right;
 }
-.pdf-container .pdf-header svg,
-.pdf-container .pdf-footer svg {
-	fill: #006e96;
-}
 .pdf-container .pdf-header {
 	border-width: 0 0 4px;
 	border-bottom: none none solid;
@@ -455,6 +451,7 @@
 	width: 16px;
 	height: 16px;
 	margin-bottom: -3px;
+	fill: #006e96;
 }
 .pdf-container .pdf-footer {
 	margin-top: 1rem;
@@ -477,6 +474,7 @@
 	width: 100%;
 }
 .pdf-container .pdf-main .article-header {
+	font-family: Lato, sans-serif;
 	border-color: #e5e5e5;
 	border-width: 0 0 1px;
 	border-style: none none solid;
