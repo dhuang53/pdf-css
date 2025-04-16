@@ -33,8 +33,8 @@ jobs:
             # Clean the branch and copy only the 'docs' directory to the root
             - name: Clean and add docs directory
               run: |
-                  rm -rf ./*  # Remove all existing files in the branch
                   cp -r docs/* .  # Copy contents of 'docs' to the root
+                  rm -rf .github/ styles/  # Remove all existing files in the branch
                   ls -la  # List files to verify
 
             # Commit and push changes to the gh-pages branch
