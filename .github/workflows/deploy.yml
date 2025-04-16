@@ -13,29 +13,19 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            # Checkout the repository
             - name: Checkout repository
               uses: actions/checkout@v2
 
-            # Ensure the 'docs' directory exists and contains the desired CSS file
-            - name: Prepare docs directory
+            - name: Keep only CSS file at the root
               run: |
-                  mkdir -p docs  # Create a 'docs' folder if it doesn't exist
-                  cp styles/ss-pdf.css docs/  # Copy the CSS file to 'docs'
+                  cp styles/ss-pdf.css .
+                  rm -rf .github/ styles/  # Remove other directories in the branch
 
-            # Switch to the gh-pages branch
             - name: Switch to gh-pages branch
               run: |
                   git config --global user.name "github-actions"
                   git config --global user.email "github-actions@github.com"
-                  git checkout -b gh-pages || git checkout gh-pages  # Create or switch to the 'gh-pages' branch
-
-            # Clean the branch and copy only the 'docs' directory to the root
-            - name: Clean and add docs directory
-              run: |
-                  cp -r docs/* .  # Copy contents of 'docs' to the root
-                  rm -rf .github/ styles/  # Remove all existing files in the branch
-                  ls -la  # List files to verify
+                  git checkout -b gh-pages # Create the 'gh-pages' branch
 
             # Commit and push changes to the gh-pages branch
             - name: Commit and push changes
