@@ -4,7 +4,7 @@
 .pdf-container * {
 	box-sizing: border-box;
 	--color-h1: #1e293b;
-	font-family: Lato, "Lato Fallback";
+	font-family: Lato, sans-serif;
 }
 .pdf-container h1,
 .pdf-container .h1,
