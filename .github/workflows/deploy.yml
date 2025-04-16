@@ -34,7 +34,7 @@ jobs:
                   git checkout -b gh-pages || git checkout gh-pages  # Create or switch to the 'gh-pages' branch
                   git pull origin gh-pages --rebase  # Pull the latest changes from 'gh-pages' and rebase
                   git add docs/ss-pdf.css
-                  git commit -m "Deploy CSS file to GitHub Pages"
+                  git commit -m "Deploy CSS file to GitHub Pages" || echo "No changes to commit"
                   git push origin gh-pages
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
