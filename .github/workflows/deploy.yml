@@ -24,6 +24,9 @@ jobs:
                   cp styles/ss-pdf.css docs/
 
             # Commit and push changes to the 'gh-pages' branch
+            - name: Clean working directory
+              run: git clean -fdx # Remove untracked files and directories
+
             - name: Commit and push changes
               run: |
                   git config --global user.name "github-actions"
