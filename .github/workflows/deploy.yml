@@ -29,6 +29,7 @@ jobs:
                   git config --global user.name "github-actions"
                   git config --global user.email "github-actions@github.com"
                   git checkout -b gh-pages || git checkout gh-pages  # Create or switch to the 'gh-pages' branch
+                  git pull origin gh-pages --rebase  # Pull the latest changes from 'gh-pages' and rebase
                   git add docs/ss-pdf.css
                   git commit -m "Deploy CSS file to GitHub Pages"
                   git push origin gh-pages
