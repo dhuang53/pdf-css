@@ -6,7 +6,7 @@
        Typography - General global typography
     **********************************************************************************************/
 
-	&* {
+	* {
 		box-sizing: border-box;
 		--color-h1: #1e293b;
 		font-family: Lato, "Lato Fallback";
