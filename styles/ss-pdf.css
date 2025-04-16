@@ -522,6 +522,7 @@
 
 		p.has-background {
 			padding: 1rem !important;
+			margin: 1rem 0 !important;
 		}
 	}
 
@@ -535,43 +536,35 @@
 		height: 100px;
 		width: 100%;
 		padding: 1rem;
+		background-color: #f1f5f9;
+		border-color: #006e96;
+
+		* {
+			color: #006e96;
+			font-size: 0.75rem;
+			margin-right: 5px;
+		}
 		td:first-child {
 			text-align: left;
 		}
 		td:last-child {
 			text-align: right;
 		}
+		svg {
+			fill: #006e96;
+		}
 	}
 	.pdf-header {
-		border-color: #006e96;
 		border-width: 0 0 4px;
-		border-style: none none solid;
-		* {
-			color: #006e96;
-			font-size: 0.75rem;
-			margin-right: 5px;
-		}
-		img {
-			height: 70px;
-			max-width: 250px;
-		}
+		border-bottom: none none solid;
 		svg {
 			width: 16;
 			height: 16;
 			margin-bottom: -3px;
-			fill: #006e96;
 		}
 	}
 	.pdf-footer {
 		margin-top: 1rem;
-		background-color: #006e96;
-		border-color: #fff;
-		* {
-			color: #fff;
-		}
-		svg {
-			fill: #fff;
-		}
 		a {
 			font-size: 16px;
 			text-decoration: none;
