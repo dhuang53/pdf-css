@@ -478,7 +478,7 @@
 	border-color: #e5e5e5;
 	border-width: 0 0 1px;
 	border-style: none none solid;
-	padding-bottom: 1.5rem;
+	padding: 1rem;
 	background-color: #f9f9f9;
 }
 .pdf-container .pdf-main .article-header .extras > * {
@@ -487,4 +487,7 @@
 }
 .pdf-container .pdf-main .article-header .extras > :first-child {
 	padding-right: 10px;
+}
+.pdf-container .pdf-main .pdf-time {
+	color: #929292;
 }
