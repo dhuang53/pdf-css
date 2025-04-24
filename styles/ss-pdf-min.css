@@ -423,7 +423,6 @@
 	width: 100%;
 	padding: 1rem;
 	background-color: #f1f5f9;
-	border-color: #006e96;
 }
 .pdf-container .pdf-header *,
 .pdf-container .pdf-footer * {
@@ -439,10 +438,6 @@
 .pdf-container .pdf-header td:last-child,
 .pdf-container .pdf-footer td:last-child {
 	text-align: right;
-}
-.pdf-container .pdf-header {
-	border-width: 0 0 4px;
-	border-bottom: none none solid;
 }
 .pdf-container .pdf-header img {
 	height: 50px;
@@ -475,11 +470,9 @@
 }
 .pdf-container .pdf-main .article-header {
 	font-family: Lato, sans-serif;
-	border-color: #e5e5e5;
-	border-width: 0 0 1px;
-	border-style: none none solid;
 	padding: 1rem;
 	background-color: #f9f9f9;
+	margin-bottom: 1rem;
 }
 .pdf-container .pdf-main .article-header .extras > * {
 	display: block;
