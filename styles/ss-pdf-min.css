@@ -479,6 +479,7 @@
 	border-width: 0 0 1px;
 	border-style: none none solid;
 	padding-bottom: 1.5rem;
+	background-color: #f9f9f9;
 }
 .pdf-container .pdf-main .article-header .extras > * {
 	display: block;
