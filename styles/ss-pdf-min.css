@@ -108,6 +108,13 @@
 	font-weight: 600;
 	letter-spacing: 0.05em;
 }
+.pdf-container ul,
+.pdf-container ol,
+.pdf-container li,
+.pdf-container b,
+.pdf-container strong {
+	font-family: Lato, sans-serif;
+}
 .pdf-container .pdf-main a:not(.btn):not(.link) {
 	color: #006e96;
 	text-decoration: underline;
