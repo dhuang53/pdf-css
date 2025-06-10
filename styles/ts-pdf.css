@@ -172,20 +172,12 @@
 
 .pdf-container .pdf-byline {
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	margin: 0.5rem 0 1rem;
 	font-family: Domine, sans-serif;
 	font-weight: 300;
 	color: #9ca3af;
-}
-
-.pdf-container .pdf-byline-list::after {
-	content: ", ";
-	margin-right: 0.5rem;
-}
-
-.pdf-container .pdf-byline-list:last-child::after {
-	content: "";
 }
 
 .pdf-container .pdf-byline-list-prefix {
