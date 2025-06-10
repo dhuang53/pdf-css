@@ -566,9 +566,6 @@ table td {
 }
 
 .pdf-container .pdf-byline {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
 	margin: 0.5rem 0;
 	font-family: Domine, sans-serif;
 	font-weight: 300;
