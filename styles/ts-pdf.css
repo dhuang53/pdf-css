@@ -160,9 +160,7 @@
   align-items: center;
   row-gap: 10px;
 }
-.meta-data .text {
-  margin-right: auto;
-}
+
 .meta-data .author-image img {
   float: left !important;
   width: 50px;
@@ -171,6 +169,35 @@
   margin-bottom: 0.5rem;
   border-radius: 50%;
 }
+
+.pdf-container .pdf-byline {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5rem;
+  margin: 0.5rem 0 1rem;
+  font-family: Domine, sans-serif;
+  font-weight: 300;
+  color: #9ca3af;
+}
+
+.pdf-container .pdf-byline-list::after {
+  content: ",";
+  margin-right: 0.5rem;
+}
+
+.pdf-container .pdf-byline-list:last-child::after {
+  content: "";
+}
+
+.pdf-container .pdf-byline-list-prefix {
+  margin-right: 0.5rem;
+}
+
+.pdf-container .pdf-byline a {
+  color: #4d98ed;
+  text-decoration: none;
+}
+
 .pdf-container .pdf-footer {
   background-color: #d43030;
 }
@@ -477,19 +504,6 @@ table td {
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.pdf-container .article-header .pdf-authors {
-  display: block;
-  font-family: Domine, sans-serif;
-  font-weight: 300;
-  color: #9ca3af;
-  padding-top: 5px;
-  margin-bottom: 0.5rem;
-}
-.pdf-container .article-header .pdf-authors a {
-  color: #4d98ed;
-  text-decoration: none;
 }
 
 .pdf-container .pdf-main .image-credit a {
