@@ -521,10 +521,8 @@ table td {
 	border: 4px solid #0000001a;
 	border-radius: 0.5rem;
 	text-align: left;
-	float: right;
-	width: calc(45% - 2rem);
-	min-width: 250px;
-	margin: 1rem 2rem 1rem 2.2rem;
+	width: 100%;
+	margin: 1rem auto;
 	padding: 1.5rem;
 	position: relative;
 }
@@ -537,45 +535,16 @@ table td {
 .pdf-container .pdf-main .content-body blockquote p span {
 	margin-top: 3rem !important;
 }
-.pdf-container .pdf-main .content-body blockquote div {
-	text-align: right;
-	font-size: 0.75rem;
-	max-width: 90%;
-	margin: 0.5rem auto 0;
-	font-weight: 400;
-}
 .pdf-container .pdf-main .content-body blockquote a {
 	text-decoration: underline;
 }
 .pdf-container .pdf-main .content-body blockquote .reference {
 	text-align: right;
 	font-size: 0.75rem;
-	margin-top: 0.5rem;
-}
-.pdf-container .pdf-main .content-body blockquote.left {
-	float: left;
-}
-.pdf-container .pdf-main .content-body blockquote::before {
-	position: absolute;
-	font-size: 6rem;
-	background-color: #fff;
-	line-height: 6rem;
-	height: 4rem;
-	top: -2rem;
-	left: -2.5rem;
-	padding: 0.5rem;
-	content: "“";
-}
-.pdf-container .pdf-main .content-body blockquote::after {
-	position: absolute;
-	font-size: 6rem;
-	background-color: #fff;
-	line-height: 6rem;
-	height: 4rem;
-	bottom: -1.25rem;
-	right: -2.5rem;
-	padding: 0.5rem 0 0 0.5rem;
-	content: "”";
+	max-width: 90%;
+	margin: 0.5rem auto 0;
+	font-weight: 400;
+	color: #929292;
 }
 
 .meta-data {
