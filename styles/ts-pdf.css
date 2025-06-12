@@ -387,16 +387,12 @@ table td {
 .pdf-container .pdf-main .content-body .imageBlock .source a {
 	color: #4d98ed;
 }
-.pdf-container .pdf-main .content-body .fr-img-caption.fr-fir,
-.pdf-container .pdf-main .content-body .fr-right,
-.pdf-container .pdf-main .content-body img.fr-fir {
+.pdf-container .pdf-main .content-body .fr-right {
 	float: right !important;
 	margin-right: 0 !important;
 	margin-left: 2rem !important;
 }
-.pdf-container .pdf-main .content-body .fr-img-caption.fr-fil,
-.pdf-container .pdf-main .content-body .fr-left,
-.pdf-container .pdf-main .content-body img.fr-fil {
+.pdf-container .pdf-main .content-body .fr-left {
 	float: left !important;
 	margin-left: 0 !important;
 	margin-right: 2rem !important;
@@ -512,6 +508,7 @@ table td {
 .pdf-container .image-meta-title,
 .pdf-container .image-caption,
 .pdf-container .image-credit {
+	font-family: Figtree, sans-serif;
 	margin: 0.3rem 0;
 }
 
