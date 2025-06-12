@@ -171,6 +171,7 @@
 	width: 16px;
 	height: 16px;
 	margin-bottom: -3px;
+	display: inline-block;
 }
 .pdf-container .pdf-footer {
 	margin-top: 1rem;
@@ -183,7 +184,7 @@
 	font-size: 10px;
 	font-weight: 400;
 	text-transform: uppercase;
-	color: #000;
+	color: white;
 }
 .pdf-container .pdf-footer img {
 	width: 157px;
