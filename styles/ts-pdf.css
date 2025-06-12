@@ -13,7 +13,7 @@
 .pdf-container * {
 	box-sizing: border-box;
 }
-..pdf-container a {
+.pdf-container a {
 	all: unset;
 }
 /* typography.css */
