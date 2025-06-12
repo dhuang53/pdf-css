@@ -146,7 +146,7 @@
 	height: 80px;
 	width: 100%;
 	padding: 0.5rem;
-	font-family: Lora, sans-serif;
+	font-family: Figtree, sans-serif;
 }
 .pdf-container .pdf-header * {
 	color: #d43030;
@@ -500,7 +500,7 @@ table td {
 	text-decoration: none !important;
 }
 .pdf-container .image-credit {
-	font-family: Domine, sans-serif;
+	font-family: Figtree, sans-serif;
 	font-weight: 300;
 	color: #9ca3af !important;
 	margin-bottom: 0;
@@ -549,6 +549,7 @@ table td {
 }
 
 .meta-data {
+	font-family: Figtree, sans-serif;
 	margin: 1rem 0 0.5rem;
 	-webkit-box-align: center;
 	-ms-flex-align: center;
@@ -567,7 +568,7 @@ table td {
 
 .pdf-container .pdf-byline {
 	margin: 0.5rem 0;
-	font-family: Domine, sans-serif;
+	font-family: Figtree, sans-serif;
 	font-weight: 300;
 	color: #9ca3af;
 }
