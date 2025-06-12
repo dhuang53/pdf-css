@@ -324,7 +324,7 @@
 .pdf-container .pdf-main .content-body .imageBlock .source {
 	text-transform: uppercase;
 	font-family: Figtree, sans-serif;
-	font-size: 0.8rem;
+	font-size: 0.75rem;
 	color: #929292;
 	line-height: 1.25;
 	overflow-wrap: break-word;
@@ -379,7 +379,7 @@
 }
 .pdf-container .pdf-main .content-body .imageBlock .source {
 	color: #929292;
-	font-size: 0.7rem;
+	font-size: 0.75rem;
 	text-transform: uppercase;
 }
 .pdf-container .pdf-main .content-body .fr-right {
@@ -498,10 +498,15 @@
 }
 
 .pdf-container .image-meta-title,
-.pdf-container .image-caption,
+.pdf-container .image-caption {
+	font-family: Figtree, sans-serif;
+	margin: 0.5rem 0;
+	font-size: 0.875rem;
+}
 .pdf-container .image-credit {
 	font-family: Figtree, sans-serif;
 	margin: 0.5rem 0;
+	font-size: 0.75rem;
 }
 
 .pdf-container .pdf-main .content-body blockquote {
@@ -532,6 +537,7 @@
 	margin: 0.5rem auto 0;
 	font-weight: 400;
 	color: #929292;
+	text-transform: uppercase;
 }
 
 .meta-data {
@@ -561,10 +567,6 @@
 
 .pdf-container .pdf-byline-list-prefix {
 	margin-right: 0.25rem;
-}
-
-.pdf-container .pdf-byline a {
-	font-weight: 600;
 }
 
 .pdf-container .accordion-content {
