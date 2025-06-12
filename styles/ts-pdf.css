@@ -6,6 +6,8 @@
 /* for headings */
 @import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
 /* globals.css */
 
 .pdf-container * {
@@ -61,12 +63,6 @@
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	line-height: 1.25rem;
-
-	.article {
-		font-weight: 400;
-		font-size: 1.125rem;
-		margin: 0.75rem 0;
-	}
 }
 
 .pdf-container h5 {
@@ -520,24 +516,33 @@ table td {
 }
 
 .pdf-container .pdf-main .content-body blockquote {
-	font-family: Domine, sans-serif;
-	border: none;
-	text-align: left;
-	float: right;
-	width: calc(50% - 2rem);
-	font-size: 1.75rem;
 	font-weight: 600;
 	color: #d43030;
-	margin: 2rem 0 2rem 2rem;
-	padding: 0;
+	border: 4px solid #0000001a;
+	border-radius: 0.5rem;
+	text-align: left;
+	float: right;
+	width: calc(45% - 2rem);
+	min-width: 250px;
+	margin: 1rem 2rem 1rem 2.2rem;
+	padding: 1.5rem;
+	position: relative;
 }
 .pdf-container .pdf-main .content-body blockquote p {
-	line-height: 1.4;
+	line-height: 1.3;
 	margin: 0;
 	padding: 0;
+	font-size: 1.375rem;
 }
 .pdf-container .pdf-main .content-body blockquote p span {
 	margin-top: 3rem !important;
+}
+.pdf-container .pdf-main .content-body blockquote div {
+	text-align: right;
+	font-size: 0.75rem;
+	max-width: 90%;
+	margin: 0.5rem auto 0;
+	font-weight: 400;
 }
 .pdf-container .pdf-main .content-body blockquote a {
 	text-decoration: underline;
@@ -546,6 +551,31 @@ table td {
 	text-align: right;
 	font-size: 0.75rem;
 	margin-top: 0.5rem;
+}
+.pdf-container .pdf-main .content-body blockquote.left {
+	float: left;
+}
+.pdf-container .pdf-main .content-body blockquote::before {
+	position: absolute;
+	font-size: 6rem;
+	background-color: #fff;
+	line-height: 6rem;
+	height: 4rem;
+	top: -2rem;
+	left: -2.5rem;
+	padding: 0.5rem;
+	content: "“";
+}
+.pdf-container .pdf-main .content-body blockquote::after {
+	position: absolute;
+	font-size: 6rem;
+	background-color: #fff;
+	line-height: 6rem;
+	height: 4rem;
+	bottom: -1.25rem;
+	right: -2.5rem;
+	padding: 0.5rem 0 0 0.5rem;
+	content: "”";
 }
 
 .meta-data {
@@ -580,4 +610,8 @@ table td {
 .pdf-container .pdf-byline a {
 	color: #4d98ed;
 	text-decoration: none;
+}
+
+.pdf-container .accordion-content {
+	font-size: 12px;
 }
